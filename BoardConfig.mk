@@ -7,6 +7,9 @@
 # Inherit from sm6150-common
 include device/xiaomi/sm6150-common/BoardConfigCommon.mk
 
+# MiuiCamera
+-include device/xiaomi/miuicamera-sweet/BoardConfig.mk
+
 DEVICE_PATH := device/xiaomi/sweet
 
 # Assert
@@ -42,6 +45,3 @@ VENDOR_SECURITY_PATCH := 2023-11-01
 
 # Inherit from proprietary files
 include vendor/xiaomi/sweet/BoardConfigVendor.mk
-
-# MiuiCamera
--include vendor/miuicamera-sweet/BoardConfig.mk

@@ -35,7 +35,7 @@ TARGET_INCLUDE_BCR := true
 # Other ROM feature flags
 BYPASS_CHARGE_SUPPORTED := true
 PERF_ANIM_OVERRIDE := true
-TORCH_STR_SUPPORTED := false
+TORCH_STR_SUPPORTED := true
 
 # Targets
 TARGET_INCLUDE_VIPERFX := true

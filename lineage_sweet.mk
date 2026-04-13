@@ -12,56 +12,42 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device.
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
-# Inherit some common LineageOS / Evolution-X stuff.
+# Inherit some common mistOS stuff.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Bootanimation
-TARGET_INCLUDE_BOOT_ANIMATIONS := true
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 2400
-
-# Face Unlock
-TARGET_SUPPORTS_64_BIT_APPS := true
-
-# DeviceAsWebcam
-TARGET_BUILD_DEVICE_AS_WEBCAM := true
-
-# Enable blur
+# Blur
 TARGET_ENABLE_BLUR := true
 
-# BCR
-TARGET_INCLUDE_BCR := true
+# Lawnchair (Pixel Launcher by default)
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
 
-# Other ROM feature flags
-PERF_ANIM_OVERRIDE := true
+# Live wallpapers
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
-# Targets
-TARGET_INCLUDE_VIPERFX := true
-TARGET_DISABLE_LINEAGE_SDK := false
-TARGET_DISABLE_EPPE := false
-TARGET_EXCLUDES_AUDIOFX := false
-TARGET_HAS_UDFPS := false
-TARGET_INCLUDE_GRAMOPHONE := true
-TARGET_ENABLE_FP_OVERRIDE := true
+# Quick tap
+TARGET_SUPPORTS_QUICK_TAP  := true
 
-# Device identifier.
+# Now Playing
+TARGET_SUPPORTS_NOW_PLAYING := false
+
+# Bypass charging
+BYPASS_CHARGE_SUPPORTED := true
+
+# GMS
+WITH_GMS := true
+
+# Mist OS Flags
+MIST_BUILD_TYPE := OFFICIAL
+MISTOS_MAINTAINER := Javi
+
 PRODUCT_NAME := lineage_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 10 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
-# GMS
-ifeq ($(WITH_GMS),true)
-TARGET_USES_MINI_GAPPS := false
-TARGET_USES_PICO_GAPPS := false
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_MOSEY := false
-TARGET_USES_MOSEY_NOPAUTH := false
-endif
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Properties

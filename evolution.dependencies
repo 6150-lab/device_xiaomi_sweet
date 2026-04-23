@@ -37,14 +37,8 @@
   },
   {
     "remote": "github-non-los",
-    "repository": "SoulEye-sweet/device_oneplus_dolby",
-    "target_path": "device/oneplus/dolby",
-    "branch": "bka"
-  },
-  {
-    "remote": "codeberg",
-    "repository": "SoulEye-sweet/vendor_oneplus_dolby",
-    "target_path": "vendor/oneplus/dolby",
+    "repository": "SoulEye-sweet/hardware_dolby",
+    "target_path": "hardware/dolby",
     "branch": "bka"
   },
   {

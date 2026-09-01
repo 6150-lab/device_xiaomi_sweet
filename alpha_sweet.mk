@@ -27,7 +27,7 @@ TARGET_PREBUILT_BCR := true
 # 1 - vanilla (default)
 # 2 - microg
 # 3 - gapps
-TARGET_BUILD_PACKAGE := 3
+TARGET_BUILD_PACKAGE := 1
 
 # Launcher
 TARGET_INCLUDE_LAWNCHAIR := false

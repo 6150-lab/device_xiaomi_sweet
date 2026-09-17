@@ -12,11 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device.
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit some common Evolution-X stuff.
-$(call inherit-product, device/xiaomi/sweet/evolution.mk)
+# Build
+DERPFEST_BUILD_TYPE := Official
+TARGET_INCLUDE_ACCORD := false
 
 # Device identifier.
 PRODUCT_NAME := lineage_sweet

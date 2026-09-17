@@ -15,6 +15,13 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Build
+DERPFEST_BUILD_TYPE := Official
+
+# Device identifier.
 PRODUCT_NAME := lineage_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi

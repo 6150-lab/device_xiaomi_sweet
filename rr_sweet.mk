@@ -12,14 +12,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device.
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common rr stuff.
+TARGET_DISABLE_EPPE := true
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-# Inherit some common Evolution-X stuff.
-$(call inherit-product, device/xiaomi/sweet/evolution.mk)
+# Build
+RR_MAINTAINER := stahed
+WITH_GMS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+
+TARGET_UNOFFICIAL_BUILD_ID := stahed
 
 # Device identifier.
-PRODUCT_NAME := lineage_sweet
+PRODUCT_NAME := rr_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 10 Pro
